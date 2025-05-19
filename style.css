@@ -1,0 +1,184 @@
+/* Faz o body ocupar toda a tela com fundo decorado */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/festa_junina.jpg');
+    /* Imagem de festa junina */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Caixa central com fundo escuro translúcido */
+.container {
+    background-color: rgba(239, 243, 242, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Título e pergunta */
+.container h1{
+    font-family: 'Freckle Face', cursive;
+    font-size: 64px;
+    background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #00cc00, #0066ff, #9900cc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    letter-spacing: 3px;
+    animation: balanco2 2s infinite;
+    margin-bottom: 25px;
+}
+
+/* Animação mais sutil de "pulsar" */
+@keyframes balanco2 {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+
+.container label {
+    color: #0f0707;
+    margin-bottom: 90px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/* Campo de resposta */
+input[type="text"] {
+    padding: 12px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+/* Botão de resposta */
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffb300;
+}
+.fogueira {
+    margin: 60px auto 20px;
+    width: 100px;
+    height: 50px;
+    position: relative;
+  }
+
+  .chama {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50px;
+    height: 80px;
+    background: radial-gradient(circle, #ff6f00 30%, #ffcc00 70%);
+    border-radius: 50% 50% 40% 40%;
+    animation: tremular 0.6s infinite alternate;
+  }
+  .madeira {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 20px;
+    background: #8b4513;
+    transform: rotate(45deg);
+  }
+
+  .madeira:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+  @keyframes tremular {
+    0% { transform: scaleY(1); opacity: 1; }
+    100% { transform: scaleY(1.1); opacity: 0.85; }
+  }
+  
+  .baloes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Não atrapalha cliques no site */
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .balao {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #ff6666, #cc0000);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: subir 10s linear infinite;
+    opacity: 0.8;
+  }
+  
+  /* Animação de subir os balões */
+  @keyframes subir {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-120vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Diferentes posições e velocidades */
+  .balao:nth-child(1) {
+    left: 10%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+  }
+  .balao:nth-child(2) {
+    left: 30%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+  }
+  .balao:nth-child(3) {
+    left: 50%;
+    animation-duration: 14s;
+    animation-delay: 1s;
+  }
+  .balao:nth-child(4) {
+    left: 70%;
+    animation-duration: 11s;
+    animation-delay: 2s;
+  }
+  .balao:nth-child(5) {
+    left: 90%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+  }
+  
