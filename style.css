@@ -1,10 +1,8 @@
-/* Faz o body ocupar toda a tela com fundo decorado */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     background-image: url('images/festa_junina.jpg');
-    /* Imagem de festa junina */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +13,7 @@ body {
     justify-content: center;
 }
 
-/* Caixa central com fundo escuro translúcido */
+
 .container {
     background-color: rgba(239, 243, 242, 0.6);
     border-radius: 15px;
@@ -26,7 +24,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-/* Título e pergunta */
+
 .container h1{
     font-family: 'Freckle Face', cursive;
     font-size: 64px;
@@ -41,7 +39,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Animação mais sutil de "pulsar" */
+
 @keyframes balanco2 {
 
     0%,
@@ -62,7 +60,7 @@ body {
     font-family: Arial, Helvetica, sans-serif
 }
 
-/* Campo de resposta */
+
 input[type="text"] {
     padding: 12px;
     width: 80%;
@@ -72,6 +70,7 @@ input[type="text"] {
     margin-bottom: 15px;
     margin-top: 30px;
     box-sizing: border-box;
+    
 }
 
 /* Botão de resposta */
